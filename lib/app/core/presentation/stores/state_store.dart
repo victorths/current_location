@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-import '../../commons.dart';
+import '../../core.dart';
 
 abstract class StateStore {
   final Rx<StateStoreStatus> _status =

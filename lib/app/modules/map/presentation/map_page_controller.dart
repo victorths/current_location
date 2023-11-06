@@ -1,4 +1,4 @@
-import '../../../core/commons.dart';
+import '../../../core/core.dart';
 import '../domain/use_cases/fetch_current_position_use_case.dart';
 import 'map_store.dart';
 

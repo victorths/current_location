@@ -1,5 +1,5 @@
 import '../../../app_module.dart';
-import '../../../core/commons.dart';
+import '../../../core/core.dart';
 import '../data/datasource/internet_datasource.dart';
 import '../data/datasource/ip_datasource.dart';
 import '../data/datasource/location_datasource.dart';

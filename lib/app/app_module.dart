@@ -1,4 +1,4 @@
-import 'core/commons.dart';
+import 'core/core.dart';
 import 'core/data/infra/dio_datasource.dart';
 import 'modules/map/presentation/map_module.dart';
 

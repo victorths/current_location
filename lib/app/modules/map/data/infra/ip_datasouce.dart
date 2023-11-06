@@ -1,4 +1,4 @@
-import 'package:current_location/app/core/commons.dart';
+import 'package:current_location/app/core/core.dart';
 import 'package:current_location/app/modules/map/data/models/location_model.dart';
 
 import '../datasource/ip_datasource.dart';
