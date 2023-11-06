@@ -1,3 +1,3 @@
-import 'package:current_location/app/core/commons.dart';
+import 'package:current_location/app/core/core.dart';
 
 class MapStore extends StateStore {}

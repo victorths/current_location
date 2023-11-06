@@ -1,4 +1,4 @@
-import 'package:current_location/app/core/commons.dart';
+import 'package:current_location/app/core/core.dart';
 
 part 'location_model.g.dart';
 
