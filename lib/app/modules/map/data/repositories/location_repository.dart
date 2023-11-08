@@ -7,12 +7,12 @@ import '../datasource/ip_datasource.dart';
 
 class LocationRepositoryImpl implements LocationRepository {
   LocationRepositoryImpl({
-    required this.datasource,
+    required this.ipDatasource,
     required this.locationDatasource,
     required this.internetDatasource,
   });
 
-  final IpDatasource datasource;
+  final IpDatasource ipDatasource;
   final LocationDatasource locationDatasource;
   final InternetDatasource internetDatasource;
 
@@ -33,14 +33,15 @@ class LocationRepositoryImpl implements LocationRepository {
         'You need either the location service enabled or a active internet connection',
       );
     }
-    final ip = await internetDatasource.ip;
-    if (ip == null) {
-      throw Exception('Invalid IP Address, check you internet connection');
-    }
-    final position = await datasource.fetchLocation(ip);
+    final ip = await ipDatasource.fetchIp();
+    final position = await ipDatasource.fetchLocation(ip);
     if (position.lat == null || position.long == null) {
       throw Exception('Invalid location from yours internet provider');
     }
-    return CurrentPositionEntity(lat: position.lat!, long: position.long!);
+    return CurrentPositionEntity(
+      lat: position.lat!,
+      long: position.long!,
+      provider: LocationProvider.internet,
+    );
   }
 }

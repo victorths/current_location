@@ -5,16 +5,20 @@ import '../../core.dart';
 abstract class StateStore {
   final Rx<StateStoreStatus> _status =
       Rx<StateStoreStatus>(StateStoreStatus.loading);
-
   StateStoreStatus get status => _status.value;
   Rx<StateStoreStatus> get rxStatus => _status;
+
+  final _error = Rxn<Exception>();
+  Exception? get error => _error.value;
+  Rx<Exception?> get rxError => _error;
 
   set status(StateStoreStatus value) => _status.value = value;
   set error(Exception? value) {
     _status.value = StateStoreStatus.error;
+    _error.value = value;
   }
 
-  void completed([String? value]) {
+  void completed() {
     _status.value = StateStoreStatus.completed;
   }
 

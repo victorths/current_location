@@ -7,8 +7,6 @@ class AppPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Modular.setInitialRoute(Routes.map);
-
     return MaterialApp.router(
       title: 'Current Location',
       routerConfig: Modular.routerConfig,
