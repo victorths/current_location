@@ -4,8 +4,8 @@ void showToast(BuildContext context, String message) {
   ScaffoldMessenger.of(context).clearSnackBars();
   ScaffoldMessenger.of(context).showSnackBar(
     SnackBar(
-      duration: const Duration(seconds: 3),
-      backgroundColor: Theme.of(context).colorScheme.secondary,
+      duration: const Duration(seconds: 5),
+      backgroundColor: Theme.of(context).colorScheme.error,
       dismissDirection: DismissDirection.none,
       content: Text(
         message,
@@ -21,12 +21,6 @@ void showToast(BuildContext context, String message) {
       padding: const EdgeInsets.symmetric(
         horizontal: 10,
         vertical: 20,
-      ),
-      margin: EdgeInsets.only(
-        bottom: MediaQuery.of(context).size.height -
-            MediaQuery.of(context).size.height / 4,
-        right: 16,
-        left: 16,
       ),
     ),
   );

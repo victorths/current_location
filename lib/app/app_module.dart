@@ -11,7 +11,7 @@ class AppModule extends Module {
   @override
   void routes(r) {
     r.module(
-      Paths.map,
+      Paths.root,
       module: MapModule(),
     );
   }

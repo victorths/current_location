@@ -8,7 +8,6 @@ class DioDatasource implements RemoteDatasource {
 
   DioDatasource([this._interceptor = const []]) {
     _dio.interceptors.addAll(_interceptor);
-    _dio.options.baseUrl = 'http://ip-api.com';
   }
 
   @override
