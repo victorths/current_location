@@ -1,3 +1,5 @@
+import 'package:flutter_map/flutter_map.dart';
+
 import '../../../app_module.dart';
 import '../../../core/core.dart';
 import '../data/datasource/internet_datasource.dart';
@@ -28,6 +30,7 @@ class MapModule extends Module {
     i.addSingleton<FetchCurrentPositionUseCase>(
       FetchCurrentPositionUseCaseImpl.new,
     );
+    i.addSingleton<MapController>(MapController.new);
     i.addSingleton<MapStore>(MapStore.new);
     i.addSingleton<MapPageController>(MapPageController.new);
   }
