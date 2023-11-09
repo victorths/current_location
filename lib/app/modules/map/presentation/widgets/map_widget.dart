@@ -30,6 +30,10 @@ class MapWidget extends StatelessWidget {
           tileProvider: CachedTileProvider(
             store: cacheStore,
           ),
+          errorTileCallback: (tile, error, stackTrace) => showToast(
+            context,
+            "You need a internet connection to download the map once.",
+          ),
         ),
         RichAttributionWidget(
           attributions: [
