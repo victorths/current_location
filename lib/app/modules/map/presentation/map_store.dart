@@ -4,7 +4,9 @@ import 'package:flutter_map/flutter_map.dart';
 import 'package:get/get.dart';
 
 class MapStore extends StateStore {
-  final MapController mapController = MapController();
+  MapStore(this.mapController);
+
+  final MapController mapController;
 
   final _currentPosition = Rxn<CurrentPositionEntity>();
   CurrentPositionEntity? get currentPosition => _currentPosition.value;
