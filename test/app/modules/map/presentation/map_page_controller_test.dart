@@ -40,7 +40,7 @@ void main() {
       'should save the CurrentPositionEntity on the store in case of success.',
       () async {
         // Fake position
-        final position = CurrentPositionEntity(
+        const position = CurrentPositionEntity(
           lat: -5.2056747,
           long: -37.3820791,
         );

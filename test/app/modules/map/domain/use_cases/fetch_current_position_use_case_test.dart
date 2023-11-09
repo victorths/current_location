@@ -20,7 +20,7 @@ void main() {
       'should return the CurrentPositionEntity that the repository returns',
       () async {
         // Fake position
-        final position = CurrentPositionEntity(
+        const position = CurrentPositionEntity(
           lat: -5.2056747,
           long: -37.3820791,
         );
